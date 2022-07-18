@@ -12,9 +12,10 @@ EXPERIMENTS
 Data
 -------------------------------------------
 
-Backbone datasets: synthetic tabular dataset that corresponds to the imbalance analysis originally undertaken in  in Japkowicz
-and Stephen (2002)
+Backbone datasets: synthetic tabular dataset that corresponds to the imbalance analysis originally undertaken in  in Japkowicz and Stephen (2002)
+
 Image datasets: imbalanced versions of CIFAR-10 and MNIST-Fashion, plus imbalanced versions of Shapes dataset proposed by (El Korchi and Ghanou in 2020)
+
 Text datasets: imbalanced versions of 20NewsGroup (Alhenaki and Hosny, 2019) and Job Classification (https://www.kaggle.com/adarshsng/predicting-job-type-category-by-job-description?select=train.csv)
 
 The datasets are not included in this repository due to storage limitations but are available upon request
@@ -22,6 +23,7 @@ The datasets are not included in this repository due to storage limitations but 
 Deep networks
 -------------------------------------------
 MLP: Deep versions of the MLP (fully connected deep network) were applied to the backbone and text datasets. The text datasets were pre-processed with TF-IDF prior to input in the network 
+
 CNN: Standard CNN architectures were used for the text data
 
 The code for the deep learning models is contained in src/models/

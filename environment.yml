@@ -1,0 +1,30 @@
+name: deepImbalanceAnalysis
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - cudatoolkit=10.1
+  - cudnn=7.6.5
+  - keras-applications=1.0.8
+  - keras-preprocessing=1.1
+  - matplotlib=3.1
+  - matplotlib-base=3.1
+  - numpy=1.18
+  - numpy-base=1.18
+  - pandas=1.0.1
+  - pickleshare=0.7.5
+  - pillow=7.1.2
+  - pip=20.0
+  - python=3.7
+  - tensorboard=2.1
+  - tensorflow=2.1
+  - tensorflow-base=2.1
+  - tensorflow-estimator=2.1
+  - tensorflow-gpu=2.1.0=h0d30ee6_0
+  - pip:
+    - tensorflow-datasets==4.3.0
+    - tensorflow-metadata==1.1.0
+    - tfds-nightly==4.3
+    - tqdm==4.61.2
+
