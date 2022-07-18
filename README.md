@@ -1,1 +1,1 @@
-# deep-imbalance-analysis
+This repository includes the code for  manuscript, "The Class Imbalance Problem in Deep Learning", by Kushankur Ghosh ,  Colin Bellinger,  Roberto Corizzo,  Paula Branco,  Bartosz Krawczyk and Nathalie Japkowicz submitted to Machine Learning
