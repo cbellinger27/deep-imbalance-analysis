@@ -28,11 +28,11 @@ CNN: Standard CNN architectures were used for the text data
 
 The code for the deep learning models is contained in src/models/ backbone_mlp.py, text_mlp.py, mnistFahsion_cifar10_cnn.py, and shapes_cnn.py
 
-Results
--------------------------------------------
-Performance is assessed based on the average g-mean
-
 Execution
 -------------------------------------------
 
 The sweep of experiments for each datasts across imbalance levels and model depths can be executed with the python run scripts: run[DATASET_NAME].py. The runner saves pickle files in the corresponding results directory. The pickle files contain lists of the sweep of runs. Finally, the compleRults.py code can be used to reformate the saved pickle results files into CSV files. 
+
+Results
+-------------------------------------------
+Performance is assessed based on the average g-mean
