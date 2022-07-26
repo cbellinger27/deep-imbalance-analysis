@@ -8,6 +8,7 @@ import PIL
 import preProcessesImages
 import matplotlib.image as mpimg
 
+
 (train_images, train_labels), (test_images, test_labels) = tf.keras.datasets.fashion_mnist.load_data()
 train_images, train_labels = preProcessesImages.processMnistFashionData(train_images, train_labels)
 test_images, test_labels = preProcessesImages.processMnistFashionData(test_images, test_labels)
@@ -42,15 +43,15 @@ for cmplx_idx in range(len(cmplxName)):
         maj_idx = np.random.choice(maj_idx, 5000)
         img_cntr = 0
         if not os.path.isdir("../../data/mnistFashion/trainDatasets/"+cmplxName[cmplx_idx]+"/"+cmplxName[cmplx_idx]+"_"+irName[ir_idx]+"/class1/"):
-            os.makedirs("../../data/mnistFashion/trainDatasets/"+cmplxName[cmplx_idx]+"/"+cmplxName[cmplx_idx]+"_"+irName[ir_idx]+"/class1/")
+            os.makedirs("../../data/cifar10/trainDatasets/"+cmplxName[cmplx_idx]+"/"+cmplxName[cmplx_idx]+"_"+irName[ir_idx]+"/class1/")
         for idx in min_idx:
-            mpimg.imsave("../../data/mnistFashion/trainDatasets/"+cmplxName[cmplx_idx]+"/"+cmplxName[cmplx_idx]+"_"+irName[ir_idx]+"/class1/image_"+str(img_cntr)+".png", train_images[idx])
+            mpimg.imsave("../../data/cifar10/trainDatasets/"+cmplxName[cmplx_idx]+"/"+cmplxName[cmplx_idx]+"_"+irName[ir_idx]+"/class1/image_"+str(img_cntr)+".png", train_images[idx])
             img_cntr+=1
-        if not os.path.isdir("../../data/mnistFashion/trainDatasets/"+cmplxName[cmplx_idx]+"/"+cmplxName[cmplx_idx]+"_"+irName[ir_idx]+"/class0/"):
-            os.makedirs("../../data/mnistFashion/trainDatasets/"+cmplxName[cmplx_idx]+"/"+cmplxName[cmplx_idx]+"_"+irName[ir_idx]+"/class0/")
+        if not os.path.isdir("../../data/cifar10/trainDatasets/"+cmplxName[cmplx_idx]+"/"+cmplxName[cmplx_idx]+"_"+irName[ir_idx]+"/class0/"):
+            os.makedirs("../../data/cifar10/trainDatasets/"+cmplxName[cmplx_idx]+"/"+cmplxName[cmplx_idx]+"_"+irName[ir_idx]+"/class0/")
         img_cntr = 0
         for idx in maj_idx:
-            mpimg.imsave("../../data/mnistFashion/trainDatasets/"+cmplxName[cmplx_idx]+"/"+cmplxName[cmplx_idx]+"_"+irName[ir_idx]+"/class0/image_"+str(img_cntr)+".png", train_images[idx])
+            mpimg.imsave("../../data/cifar10/trainDatasets/"+cmplxName[cmplx_idx]+"/"+cmplxName[cmplx_idx]+"_"+irName[ir_idx]+"/class0/image_"+str(img_cntr)+".png", train_images[idx])
             img_cntr+=1
 
 # %%
@@ -69,15 +70,15 @@ for cmplx_idx in range(len(cmplxName)):
     maj_idx = np.where(test_labels==cc[cmplx_idx][0])[0]
     maj_idx = np.random.choice(maj_idx, 5000)
     img_cntr = 0
-    if not os.path.isdir("../../data/mnistFashion/testDatasets/"+cmplxName[cmplx_idx]+"/class1/"):
-        os.makedirs("../../data/mnistFashion/testDatasets/"+cmplxName[cmplx_idx]+"/class1/")
+    if not os.path.isdir("../../data/cifar10/testDatasets/"+cmplxName[cmplx_idx]+"/class1/"):
+        os.makedirs("../../data/cifar10/testDatasets/"+cmplxName[cmplx_idx]+"/class1/")
     for idx in min_idx:
-        mpimg.imsave("../../data/mnistFashion/testDatasets/"+cmplxName[cmplx_idx]+"/class1/image_"+str(img_cntr)+".png", test_images[idx])
+        mpimg.imsave("../../data/cifar10/testDatasets/"+cmplxName[cmplx_idx]+"/class1/image_"+str(img_cntr)+".png", test_images[idx])
         img_cntr+=1
-    if not os.path.isdir("../../data/mnistFashion/testDatasets/"+cmplxName[cmplx_idx]+"/class0/"):
-        os.makedirs("../../data/mnistFashion/testDatasets/"+cmplxName[cmplx_idx]+"/class0/")
+    if not os.path.isdir("../../data/cifar10/testDatasets/"+cmplxName[cmplx_idx]+"/class0/"):
+        os.makedirs("../../data/cifar10/testDatasets/"+cmplxName[cmplx_idx]+"/class0/")
     img_cntr = 0
     for idx in maj_idx:
-        mpimg.imsave("../../data/mnistFashion/testDatasets/"+cmplxName[cmplx_idx]+"/class0/image_"+str(img_cntr)+".png", test_images[idx])
+        mpimg.imsave("../../data/cifar10/testDatasets/"+cmplxName[cmplx_idx]+"/class0/image_"+str(img_cntr)+".png", test_images[idx])
         img_cntr+=1
 
