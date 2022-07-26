@@ -130,6 +130,7 @@ for imblv in IMB_LVs:
     a_file = open('results/shapes/cnnShapesModel_Ep_DO_ERLSTP_True'+str(EP)+'_Hu'+str(HU)+'_Imblv_'+str(imblv)+"_cmplx_"+str(CMPLX)+'.pkl', 'wb')                       
     pickle.dump(RSLTS_ALL, a_file)
     a_file.close()
+    print("Done imbalance leve: " + imblv)
     RSLTS =[]
     RSLTS_TRN = []                   
     MLD_STRS =[] 

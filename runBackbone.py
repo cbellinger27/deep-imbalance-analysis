@@ -121,4 +121,8 @@ for CMPLX in ["5"]:
         a_file = open(mld_str, 'wb')                     
         pickle.dump(tmpLst, a_file)
         a_file.close()
-        print("Done")
+        RSLTS =[]
+        RSLTS_TRN = []                   
+        MLD_STRS =[] 
+        RSLTS_ALL = []
+        print("Done imbalance leve: " + imblv)
