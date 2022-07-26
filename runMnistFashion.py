@@ -19,8 +19,8 @@ tf.random.set_seed(1234)
 np.random.seed(seed=1235)
 
 #RUNNER
-DATASET_PATH_TRN = "../data/mnistFashion/trainDatasets/"
-DATASET_PATH_TST = "../data/mnistFashion/testDatasets/"
+DATASET_PATH_TRN = "data/mnistFashion/trainDatasets/"
+DATASET_PATH_TST = "data/mnistFashion/testDatasets/"
 
 CMPLX = "c1"
 IMB_LVs = ["1","2","3","4","5"]
@@ -39,8 +39,8 @@ RSLTS_ALL = []
 MLD_STRS_ALL = []                                                   
 RSLTS_TRN_ALL = []                                                  
 
-if not os.path.isdir("../results/mnistFashion/"):
-    os.makedirs("../results/mnistFashion/")
+if not os.path.isdir("results/mnistFashion/"):
+    os.makedirs("results/mnistFashion/")
 
 #for each imbalanced level in datasets with complexity C            
 for imblv in IMB_LVs:                                               
@@ -121,7 +121,7 @@ for imblv in IMB_LVs:
                     RSLTS_ALL.append(RSLTS)                             
                     RSLTS_TRN_ALL.append(RSLTS_TRN)                     
                     MLD_STRS_ALL.append(MLD_STRS)
-    a_file = open('../results/mnistFashion/cnnModel_Ep_DO_ERLSTP_True'+str(EP)+'_Hu'+str(HU)+'_Imblv_'+str(imblv)+"_cmplx_"+str(CMPLX)+'.pkl', 'wb')                       
+    a_file = open('results/mnistFashion/cnnModel_Ep_DO_ERLSTP_True'+str(EP)+'_Hu'+str(HU)+'_Imblv_'+str(imblv)+"_cmplx_"+str(CMPLX)+'.pkl', 'wb')                       
     pickle.dump(RSLTS_ALL, a_file)
     a_file.close()
     print("Done imbalance leve: " + imblv)

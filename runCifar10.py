@@ -18,11 +18,11 @@ np.random.seed(seed=1235)
 
 
 #RUNNER
-DATASET_PATH_TRN = "~/data/cifar10/trainDatasets/"
-DATASET_PATH_TST = "~/data/cifar10/testDatasets/"
+DATASET_PATH_TRN = "data/cifar10/trainDatasets/"
+DATASET_PATH_TST = "data/cifar10/testDatasets/"
 
-if not os.path.isdir("../results/cifar10/"):
-    os.makedirs("../results/cifar10/")
+if not os.path.isdir("results/cifar10/"):
+    os.makedirs("results/cifar10/")
 
 CMPLX = "c1"
 IMB_LVs = ["1","2","3","4","5"]
