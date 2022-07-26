@@ -1,7 +1,6 @@
 # %%
 import numpy as np
 import tensorflow as tf
-import tensorflow_datasets as tfds
 import os
 import PIL
 import PIL.Image
@@ -19,7 +18,7 @@ np.random.seed(seed=1235)
 
 
 #RUNNER
-DATASET_PATH_TRN = "~/data/cifar10/"
+DATASET_PATH_TRN = "~/data/cifar10/trainDatasets/"
 DATASET_PATH_TST = "~/data/cifar10/testDatasets/"
 
 

@@ -2,21 +2,12 @@
 
 import numpy as np
 import tensorflow as tf
-import tensorflow_datasets as tfds
 import os
 import PIL
 import PIL.Image
 
-from sklearn.preprocessing import MinMaxScaler, StandardScaler
-from sklearn.model_selection import StratifiedKFold, RepeatedStratifiedKFold, StratifiedShuffleSplit
-from sklearn.metrics import balanced_accuracy_score
-from sklearn.metrics import classification_report
-from sklearn.metrics import f1_score
-from sklearn.metrics import confusion_matrix
-from imblearn.metrics import geometric_mean_score
 from src.models import mnistFashion_cifar10_cnn as cnn_model
 from src import helpers
-from sklearn.utils.class_weight import compute_class_weight
 import datetime
 from copy import copy
 import pathlib
@@ -28,7 +19,7 @@ tf.random.set_seed(1234)
 np.random.seed(seed=1235)
 
 #RUNNER
-DATASET_PATH_TRN = "~/data/mnistFashion/"
+DATASET_PATH_TRN = "~/data/mnistFashion/trainDatasets/"
 DATASET_PATH_TST = "~/data/mnistFashion/testDatasets/"
 
 CMPLX = "c1"
