@@ -11,7 +11,9 @@ MLD_DVs = [1, 2, 3, 4, 5]
 DO_DP = [True, False]
 DO_RLROP = [True, False] #ReduceLROnPlateau
 DO_EARLY_STOP = [True, False]
-PATH = 'results/shapes/cnnShapesModel_'
+# PATH = '../results/shapes/cnnShapesModel_'
+PATH = '../results/mnistFashion/cnnModel_'
+# PATH = '../results/cifar10/cnnModel_'
 HU = 100  
 EP = 100 
 

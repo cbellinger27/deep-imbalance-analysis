@@ -1,4 +1,5 @@
 results
+*.pyc
 *.pdf
 *.pkl
 *.csv
