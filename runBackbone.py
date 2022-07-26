@@ -20,6 +20,8 @@ np.random.seed(seed=1235)
 physical_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
+if not os.path.isdir("../results/backbone/"):
+    os.makedirs("../results/backbone/")
 
 #RUNNER
 DATASET_PATH_TRN = "~/data/backbone/TraditionalBackbone_size"

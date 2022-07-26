@@ -28,6 +28,9 @@ tf.config.experimental.set_memory_growth(physical_devices[0], True)
 DATASET_PATH_TRN = "/home/colin/data/ShapesDataset_edited/small/"
 DATASET_PATH_TST = "/home/colin/data/ShapesDataset_edited/small/testDatasets/"
 
+if not os.path.isdir("../results/shapes/"):
+    os.makedirs("../results/shapes/")
+
 CMPLX = "c1"
 IMB_LVs = ["1","2","3","4","5"]
 MLD_DVs = [1, 2,3,4,5]
