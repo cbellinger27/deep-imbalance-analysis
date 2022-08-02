@@ -23,6 +23,7 @@ dependencies:
   - tensorflow-estimator=2.1
   - tensorflow-gpu=2.1.0=h0d30ee6_0
   - imbalanced-learn
+  - tqdm
   - pip:
     - tensorflow-datasets==4.3.0
     - tensorflow-metadata==1.1.0
